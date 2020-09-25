@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{83B10961-3E14-4451-853B-08A62BA0D5F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>anket</RootNamespace>
+    <AssemblyName>anket</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44340</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>anket.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>anket.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controller\app.js" />
+    <Content Include="controller\JavaScript.js" />
+    <Content Include="index.html" />
+    <Content Include="OnsenUI\css-components-src\gulpfile.js" />
+    <Content Include="OnsenUI\css-components-src\misc\screenshot-01.png" />
+    <Content Include="OnsenUI\css-components-src\misc\screenshot-02.png" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\app.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\app-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\category-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\component-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\components-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\notfound-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\pattern-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\patterns-page.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\platform-select.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\preview-component.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\components\theme-select.js" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\select-icon.svg" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\style.css" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\util.js" />
+    <Content Include="OnsenUI\css-components-src\src\components\action-sheet.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\alert-dialog.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\button-bar.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\button.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\card.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\checkbox.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\combination.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\dialog.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\fab.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\global.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\index.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\list.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\modal.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\notification.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\page.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\popover.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\progress-bar.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\progress-circular.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\radio-button.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\range.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\search-input.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\segment.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\select.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\switch.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\tabbar.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\text-input.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\textarea.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\toast.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\toolbar-button.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\toolbar.css" />
+    <Content Include="OnsenUI\css-components-src\src\components\util.css" />
+    <Content Include="OnsenUI\css-components-src\src\dark-onsen-css-components.css" />
+    <Content Include="OnsenUI\css-components-src\src\dark-theme.css" />
+    <Content Include="OnsenUI\css-components-src\src\img\android-search-input-icon.svg" />
+    <Content Include="OnsenUI\css-components-src\src\img\ios-search-input-icon.svg" />
+    <Content Include="OnsenUI\css-components-src\src\img\select-arrow.svg" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\action-sheet.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\combination.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\fab.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\global.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\index.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\page.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\tabbar.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\toast.css" />
+    <Content Include="OnsenUI\css-components-src\src\iphonex-support\toolbar.css" />
+    <Content Include="OnsenUI\css-components-src\src\license.css" />
+    <Content Include="OnsenUI\css-components-src\src\old-onsen-css-components.css" />
+    <Content Include="OnsenUI\css-components-src\src\old-theme.css" />
+    <Content Include="OnsenUI\css-components-src\src\onsen-css-components.css" />
+    <Content Include="OnsenUI\css-components-src\src\theme.css" />
+    <Content Include="OnsenUI\css-components-src\stylelint.config.js" />
+    <Content Include="OnsenUI\css\dark-onsen-css-components.css" />
+    <Content Include="OnsenUI\css\dark-onsen-css-components.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\all.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\all.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\brands.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\brands.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\fontawesome.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\fontawesome.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\regular.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\regular.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\solid.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\solid.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\svg-with-js.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\svg-with-js.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\v4-shims.css" />
+    <Content Include="OnsenUI\css\font_awesome\css\v4-shims.min.css" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="OnsenUI\css\ionicons\css\ionicons-core.css" />
+    <Content Include="OnsenUI\css\ionicons\css\ionicons-core.min.css" />
+    <Content Include="OnsenUI\css\ionicons\css\ionicons.css" />
+    <Content Include="OnsenUI\css\ionicons\css\ionicons.min.css" />
+    <Content Include="OnsenUI\css\ionicons\fonts\ionicons.svg" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="OnsenUI\css\old-onsen-css-components.css" />
+    <Content Include="OnsenUI\css\old-onsen-css-components.min.css" />
+    <Content Include="OnsenUI\css\onsen-css-components.css" />
+    <Content Include="OnsenUI\css\onsen-css-components.min.css" />
+    <Content Include="OnsenUI\css\onsenui-core.css" />
+    <Content Include="OnsenUI\css\onsenui-core.min.css" />
+    <Content Include="OnsenUI\css\onsenui-fonts.css" />
+    <Content Include="OnsenUI\css\onsenui.css" />
+    <Content Include="OnsenUI\css\onsenui.min.css" />
+    <Content Include="OnsenUI\dark-onsen-css-components.css" />
+    <Content Include="OnsenUI\dark-onsen-css-components.min.css" />
+    <Content Include="OnsenUI\esm\elements\base\base-button.js" />
+    <Content Include="OnsenUI\esm\elements\base\base-checkbox.js" />
+    <Content Include="OnsenUI\esm\elements\base\base-dialog.js" />
+    <Content Include="OnsenUI\esm\elements\base\base-element.js" />
+    <Content Include="OnsenUI\esm\elements\base\base-input.js" />
+    <Content Include="OnsenUI\esm\elements\ons-action-sheet-button.js" />
+    <Content Include="OnsenUI\esm\elements\ons-action-sheet\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-action-sheet\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-alert-dialog-button.js" />
+    <Content Include="OnsenUI\esm\elements\ons-alert-dialog\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-alert-dialog\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-back-button.js" />
+    <Content Include="OnsenUI\esm\elements\ons-bottom-toolbar.js" />
+    <Content Include="OnsenUI\esm\elements\ons-button.js" />
+    <Content Include="OnsenUI\esm\elements\ons-card.js" />
+    <Content Include="OnsenUI\esm\elements\ons-carousel-item.js" />
+    <Content Include="OnsenUI\esm\elements\ons-carousel.js" />
+    <Content Include="OnsenUI\esm\elements\ons-checkbox.js" />
+    <Content Include="OnsenUI\esm\elements\ons-col.js" />
+    <Content Include="OnsenUI\esm\elements\ons-dialog\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-dialog\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-fab.js" />
+    <Content Include="OnsenUI\esm\elements\ons-gesture-detector.js" />
+    <Content Include="OnsenUI\esm\elements\ons-icon.js" />
+    <Content Include="OnsenUI\esm\elements\ons-if.js" />
+    <Content Include="OnsenUI\esm\elements\ons-input.js" />
+    <Content Include="OnsenUI\esm\elements\ons-lazy-repeat.js" />
+    <Content Include="OnsenUI\esm\elements\ons-list-header.js" />
+    <Content Include="OnsenUI\esm\elements\ons-list-item\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-list-item\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-list-title.js" />
+    <Content Include="OnsenUI\esm\elements\ons-list.js" />
+    <Content Include="OnsenUI\esm\elements\ons-modal\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-modal\fade-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-modal\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-modal\lift-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\ios-fade-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\ios-lift-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\ios-slide-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\ios-swipe-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\md-fade-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\md-lift-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\md-slide-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-navigator\none-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-page.js" />
+    <Content Include="OnsenUI\esm\elements\ons-popover\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-popover\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-progress-bar.js" />
+    <Content Include="OnsenUI\esm\elements\ons-progress-circular.js" />
+    <Content Include="OnsenUI\esm\elements\ons-pull-hook.js" />
+    <Content Include="OnsenUI\esm\elements\ons-radio.js" />
+    <Content Include="OnsenUI\esm\elements\ons-range.js" />
+    <Content Include="OnsenUI\esm\elements\ons-ripple\animator-css.js" />
+    <Content Include="OnsenUI\esm\elements\ons-ripple\animator-js.js" />
+    <Content Include="OnsenUI\esm\elements\ons-ripple\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-row.js" />
+    <Content Include="OnsenUI\esm\elements\ons-search-input.js" />
+    <Content Include="OnsenUI\esm\elements\ons-segment.js" />
+    <Content Include="OnsenUI\esm\elements\ons-select.js" />
+    <Content Include="OnsenUI\esm\elements\ons-speed-dial-item.js" />
+    <Content Include="OnsenUI\esm\elements\ons-speed-dial.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter-content.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter-mask.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter-side.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter\overlay-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter\push-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-splitter\reveal-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-switch.js" />
+    <Content Include="OnsenUI\esm\elements\ons-tab.js" />
+    <Content Include="OnsenUI\esm\elements\ons-tabbar\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-template.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\ascend-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\fade-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\fall-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\index.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toast\lift-animator.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toolbar-button.js" />
+    <Content Include="OnsenUI\esm\elements\ons-toolbar.js" />
+    <Content Include="OnsenUI\esm\index.js" />
+    <Content Include="OnsenUI\esm\ons\action-sheet.js" />
+    <Content Include="OnsenUI\esm\ons\animation-options-parser.js" />
+    <Content Include="OnsenUI\esm\ons\animit.js" />
+    <Content Include="OnsenUI\esm\ons\autostyle.js" />
+    <Content Include="OnsenUI\esm\ons\base-animator.js" />
+    <Content Include="OnsenUI\esm\ons\content-ready.js" />
+    <Content Include="OnsenUI\esm\ons\doorlock.js" />
+    <Content Include="OnsenUI\esm\ons\elements.js" />
+    <Content Include="OnsenUI\esm\ons\gesture-detector.js" />
+    <Content Include="OnsenUI\esm\ons\index.js" />
+    <Content Include="OnsenUI\esm\ons\internal\animator-factory.js" />
+    <Content Include="OnsenUI\esm\ons\internal\device-back-button-dispatcher.js" />
+    <Content Include="OnsenUI\esm\ons\internal\index.js" />
+    <Content Include="OnsenUI\esm\ons\internal\internal.js" />
+    <Content Include="OnsenUI\esm\ons\internal\lazy-repeat.js" />
+    <Content Include="OnsenUI\esm\ons\internal\modifier-util.js" />
+    <Content Include="OnsenUI\esm\ons\internal\swipe-reveal.js" />
+    <Content Include="OnsenUI\esm\ons\internal\swiper.js" />
+    <Content Include="OnsenUI\esm\ons\internal\toast-queue.js" />
+    <Content Include="OnsenUI\esm\ons\iphonex-patch.js" />
+    <Content Include="OnsenUI\esm\ons\microevent.js" />
+    <Content Include="OnsenUI\esm\ons\modifier.js" />
+    <Content Include="OnsenUI\esm\ons\notification.js" />
+    <Content Include="OnsenUI\esm\ons\orientation.js" />
+    <Content Include="OnsenUI\esm\ons\page-attribute-expression.js" />
+    <Content Include="OnsenUI\esm\ons\page-loader.js" />
+    <Content Include="OnsenUI\esm\ons\platform.js" />
+    <Content Include="OnsenUI\esm\ons\software-keyboard.js" />
+    <Content Include="OnsenUI\esm\ons\styler.js" />
+    <Content Include="OnsenUI\esm\ons\util.js" />
+    <Content Include="OnsenUI\esm\polyfills\index.js" />
+    <Content Include="OnsenUI\esm\polyfills\MutationObserver%400.7.22\MutationObserver.js" />
+    <Content Include="OnsenUI\esm\polyfills\polyfill-switches.js" />
+    <Content Include="OnsenUI\esm\polyfills\setImmediate%401.0.2+mod\setImmediate.js" />
+    <Content Include="OnsenUI\esm\vendor\index.js" />
+    <Content Include="OnsenUI\esm\vendor\viewport.js" />
+    <Content Include="OnsenUI\js\angular-onsenui.js" />
+    <Content Include="OnsenUI\js\angular-onsenui.min.js" />
+    <Content Include="OnsenUI\js\onsenui.js" />
+    <Content Include="OnsenUI\js\onsenui.min.js" />
+    <Content Include="OnsenUI\old-onsen-css-components.css" />
+    <Content Include="OnsenUI\old-onsen-css-components.min.css" />
+    <Content Include="OnsenUI\onsen-css-components.css" />
+    <Content Include="OnsenUI\onsen-css-components.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="OnsenUI\bower.json" />
+    <Content Include="OnsenUI\CHANGELOG.md" />
+    <Content Include="OnsenUI\css-components-src\package.json" />
+    <Content Include="OnsenUI\css-components-src\patterns.yaml" />
+    <Content Include="OnsenUI\css-components-src\previewer-src\index.html.eco" />
+    <Content Include="OnsenUI\css-components-src\README.md" />
+    <Content Include="OnsenUI\css-components-src\yarn.lock" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="OnsenUI\css\font_awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="OnsenUI\css\ionicons\fonts\ionicons.eot" />
+    <Content Include="OnsenUI\css\ionicons\fonts\ionicons.ttf" />
+    <Content Include="OnsenUI\css\ionicons\fonts\ionicons.woff" />
+    <Content Include="OnsenUI\css\ionicons\fonts\ionicons.woff2" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="OnsenUI\css\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="OnsenUI\LICENSE" />
+    <Content Include="OnsenUI\package.json" />
+    <Content Include="OnsenUI\README.md" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="OnsenUI\js\onsenui.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49238</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

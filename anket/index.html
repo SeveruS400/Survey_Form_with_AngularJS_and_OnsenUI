@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="my-app">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="OnsenUI/css/onsenui.css" rel="stylesheet" />
+    <link href="OnsenUI/css/onsen-css-components.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="OnsenUI/js/onsenui.min.js"></script>
+    <script src="OnsenUI/js/angular-onsenui.js"></script>
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <style>
+        .page--full_bg__background {
+            background-color:bisque;
+            background-position:center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .page-full_bg > .navigation-bar {
+            background-color: transparent;
+        }
+    </style>
+
+   
+
+</head>
+<body ng-controller="PageController">
+    <ons-navigator swipeable var="myNavigator" page="page1.html"></ons-navigator>
+
+    <ons-template id="page1.html">
+        <ons-page modifier="full_bg">
+            <ons-toolbar style="background-color: #810707; color: #00ff21">
+                <div class="center">Anket Değerlendirme Formu</div>
+            </ons-toolbar>
+
+            <p style="text-align: center">
+
+                <ons-list-item tappable>
+
+                    <ons-row>
+                        <ons-col>
+                        </ons-col>
+                        <ons-col>
+                            <label for="checkbox-1" >
+
+                                <i class="em em-tired_face" aria-role="presentation" aria-label="TIRED FACE"></i>
+                            </label>
+                        </ons-col>
+
+                        <ons-col>
+                            <label for="checkbox-2">
+
+                                <i class="em em-white_frowning_face" aria-role="presentation" aria-label="dfsdf"></i>
+                            </label>
+                        </ons-col>
+
+                        <ons-col>
+                            <label for="checkbox-3">
+
+                                <i class="em em-thinking_face" aria-role="presentation" aria-label="THINKING FACE"></i>
+                            </label>
+                        </ons-col>
+
+                        <ons-col>
+                            <label for="checkbox-4">
+
+                                <i class="em em-smiley" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH"></i>
+                            </label>
+                        </ons-col>
+
+                        <ons-col>
+                            <label for="checkbox-5">
+
+                                <i class="em em-wink" aria-role="presentation" aria-label="WINKING FACE"></i>
+                            </label>
+                        </ons-col>
+                        <ons-col>
+                        </ons-col>
+
+                    </ons-row>
+                    <ons-row>
+                        <br />
+                    </ons-row>
+                    <ons-row>
+
+                        <ons-col>
+                        </ons-col>
+                        <ons-col>
+                            <ons-checkbox class="checkbox-color" input-id="checkbox-1" ;ons ng-click="alert()"></ons-checkbox>
+
+                        </ons-col>
+                        <ons-col>
+                            <ons-checkbox class="checkbox-color" input-id="checkbox-2" ;ons ng-click="alert()"></ons-checkbox>
+                        </ons-col>
+                        <ons-col>
+                            <ons-checkbox class="checkbox-color" input-id="checkbox-3" ;ons ng-click="alert()"></ons-checkbox>
+                        </ons-col>
+                        <ons-col>
+                            <ons-checkbox class="checkbox-color" input-id="checkbox-4" ;ons ng-click="alert()"></ons-checkbox>
+                        </ons-col>
+                        <ons-col>
+                            <ons-checkbox class="checkbox-color" input-id="checkbox-5" ;ons ng-click="alert()"></ons-checkbox>
+                        </ons-col>
+                        <ons-col>
+                        </ons-col>
+
+
+                    </ons-row>
+
+                </ons-list-item>
+
+                <ons-row>
+                    <br />
+                </ons-row>
+
+                <ons-col>
+                    <ons-button style="background-color: #00ff21; color:black;"  ng-click="alert()"">
+                        Satın Almayı Düşünüyorum
+                    </ons-button>
+                </ons-col>
+                <br />
+                <ons-col>
+                    <ons-button style="background-color: #00ff21;color: black;" ng-click="myNavigator.pushPage('assessment.html')">
+                        Satın Almayı Düşünmüyorum
+                    </ons-button>
+                </ons-col>
+            </p>
+        </ons-page>
+    </ons-template>
+
+    <template id="assessment.html">
+        <ons-page id="assessment" modifier="full_bg">
+            <ons-toolbar style="background-color: #810755; color: #00ff21">
+                <div class="center">Anket Değerlendirme</div>
+                <ons-back-button></ons-back-button>
+            </ons-toolbar>
+            <p style="text-align: center;">
+                Neden almak istmediğinizi giriniz?
+            </p>
+
+            <ons-row>
+                <ons-checkbox input-id="checkbox-01"></ons-checkbox>
+                <b>Beğenmedim</b>
+            </ons-row>
+            <br />
+            <ons-row>
+                <ons-checkbox input-id="checkbox-02"></ons-checkbox>
+                <b>Bu fiyata bu alınmaz</b>
+            </ons-row>
+            <br />
+            <ons-row>
+                <ons-checkbox input-id="checkbox-03"></ons-checkbox>
+                <b>İhtiyacım yok</b>
+            </ons-row>
+            <br />
+            <ons-row>
+                <ons-checkbox input-id="checkbox-04"></ons-checkbox>
+                <b>Alıcı değilim,bakıcıyım</b>
+            </ons-row>
+            <br />
+            <ons-row>
+                <ons-checkbox input-id="checkbox-05"></ons-checkbox>
+                <b>Kurtlar Vadisi ilk 97 bölüm</b>
+            </ons-row>
+            <br />
+            <ons-row>
+                <ons-checkbox input-id="checkbox-05"></ons-checkbox>
+                <b>Diğer</b>
+            </ons-row>
+            <br />
+            <div class="right">
+                <ons-button ng-click="myNavigator.pushPage('page1.html');alert()">
+                    Kaydet
+                </ons-button>
+
+
+            </div>
+        </ons-page>
+    </template>
+
+
+
+
+    <script src="controller/app.js"></script>
+
+</body>
+</html>
